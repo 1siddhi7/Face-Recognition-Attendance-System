@@ -30,7 +30,7 @@ def TakeImages():
     name = input("Enter Name ")
     
     if(is_number(Id) and name.isalpha()):
-        cam = cv2.VideoCapture(0)
+        cam = cv2.VideoCapture(1)
         harcascadePath = "haarcascade_frontalface_default.xml"
         detector=cv2.CascadeClassifier(harcascadePath)
         sampleNum=0
@@ -106,7 +106,7 @@ def TrackImages():
     print(df)
     my_list=[0]*10
 
-    cam = cv2.VideoCapture(0)
+    cam = cv2.VideoCapture(1)
     font = cv2.FONT_HERSHEY_SIMPLEX        
     col_names =  ['Id','Name','Date','Time']
     attendance = pd.DataFrame(columns = col_names)    
